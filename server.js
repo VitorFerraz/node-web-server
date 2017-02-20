@@ -3,7 +3,7 @@ const hbs = require("hbs");
 var app = express();
 const fs = require('fs');
 
-
+const port  = process.env.PORT || 3000;
 
 hbs.registerPartials(__dirname+'/views/partials');
 //__dirname =  diretorio absoluto
@@ -86,6 +86,6 @@ app.get('/bad',(req,res)=>{
     })
 });
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("O Servidor esta rodando na porta 3000");
 });
